@@ -1,5 +1,12 @@
 %has-bg {
   background: $light-gray;
+
+  .location {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    font-size: 0.8em;
+  }
 }
 
 .schedule {
@@ -11,17 +18,22 @@
   .day {
     font-weight: $global-weight-normal;
   }
-}
 
-[id*='Day-']:target {
-  padding-top: 4rem;
+  .day,
+  .lead {
+    text-align: center;
+  }
 }
 
 .time {
   display: block;
   margin-bottom: 1rem;
-  font-size: 1.6rem;
-  font-weight: $global-weight-semibold;
+  font-size: rem-calc(24px);
+  text-align: center;
+
+  .muted:before {
+    content: " – ";
+  }
 }
 
 .events {
@@ -38,6 +50,7 @@
   margin: 0 0 1em;
   padding: 0;
   width: 100%;
+  text-align: center;
 
   a {
     text-decoration: none;
@@ -63,9 +76,13 @@
     flex-grow: 1;
   }
 
+  .event-byline {
+    margin-top: auto;
+    padding-top: $global-margin * 2;
+  }
+
   .label {
-    align-self: flex-start;
-    font-size: .75rem;
+    align-self: center;
   }
 
   .avatar {
@@ -73,17 +90,6 @@
     max-width: 60px;
     border-radius: 50%;
     vertical-align: middle;
-  }
-
-  .location {
-    position: absolute;
-    top:6px;
-    right: 12px;
-    font-size: 0.8em;
-  }
-
-  & & {
-    position: static;
   }
 }
 
@@ -105,13 +111,13 @@
 
 .event-title {
   margin-bottom: .5rem;
-  font-size: 1.2rem;
+  font-size: rem-calc(24px);
 }
 
 // Handle variations
 .event.loc-main {
   @extend %has-bg;
-  border-top: 8px solid $brand-color6;
+  border-top: 8px solid $festival;
 }
 
 .event.loc-main .location {
@@ -120,17 +126,17 @@
 
 .event.loc-alt {
   @extend %has-bg;
-  border-top: 8px solid $brand-color3;
+  border-top: 8px solid $orchid;
 }
 
 .event.loc-alt-2 {
   @extend %has-bg;
-  border-top: 8px solid $brand-color2;
+  border-top: 8px solid $violetred;
 }
 
 .event.loc-alt-3 {
   @extend %has-bg;
-  border-top: 8px solid $brand-color8;
+  border-top: 8px solid $sienna;
 }
 
 .event.loc-main,
@@ -138,20 +144,6 @@
 .event.loc-alt-2,
 .event.loc-alt-3 {
   padding: ($global-margin * 1.75) $global-margin $global-margin;
-}
-
-.event-byline {
-  display: flex;
-  align-items: center;
-
-  margin-top: 30px;
-  margin-bottom: 0;
-
-  line-height: 1.2;
-
-  & + & {
-    margin-top: $global-margin / 2;
-  }
 }
 
 @include breakpoint(medium) {
@@ -187,95 +179,16 @@
 
   .time {
     margin-bottom: 0;
-    font-size: 1.2rem;
+    font-size: rem-calc(18px);
     text-align: right;
 
     .muted {
       display: block;
-      font-weight: $global-weight-normal;
       opacity: 0.6;
     }
-  }
 
-  .schedule {
-    .day,
-    .lead {
-      text-align: center;
-    }
-  }
-}
-
-
-.schedule-nav {
-  margin-bottom: $global-margin;
-
-  &-title {
-    display: block;
-    margin-bottom: $global-margin;
-    padding: .3em 1em;
-    background: $brand-color2;
-    font-weight: $global-weight-bold;
-    text-align: center;
-    color: $white;
-  }
-
-  &-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    margin-bottom: 0;
-    list-style: none;
-    width: 50%;
-  }
-
-  a {
-    display: block;
-    padding: .5rem 1rem;
-    font-weight: $global-weight-semibold;
-    text-align: center;
-  }
-
-  @include breakpoint(720px) {
-    li {
-      width: 33.33%;
-    }
-  }
-
-  @include breakpoint(920px) {
-    display: flex;
-
-    &-title {
-      display: inline-block;
-      margin-bottom: 0;
-    }
-
-    &-list {
-      flex: 1;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-    }
-
-    li {
-      flex: 1;
-      width: auto;
-    }
-
-    li,
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 0;
-    }
-
-    a {
-      padding-right: .5rem;
-      padding-left: .5rem;
+    .muted:before {
+      content: "";
     }
   }
 }

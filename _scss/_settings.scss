@@ -46,21 +46,15 @@
 //  37. Top Bar
 
 
-// Primary Colors
-$brand-color1: #0A51A4;
-$brand-color2: #703D76;
-$brand-color3: #F37741;
-$brand-color4: #171D2F;
-
-// Secondary colors
-$brand-color5: #A257AA;
-$brand-color6: #D19FDD;
-$brand-color7: #FBAECD;
-$brand-color8: #F7B07C;
-
-
-
-
+$eminence: #6D0F84;
+$orchid: #B52BC9;
+$shakespeare: #05B4DD;
+$viking: #07C8E8;
+$willow: #B7DB53;
+$violetred: #EA5397;
+$sienna: #FC7E56;
+$festival: #F9CC12;
+$yellow: #FFE363;
 
 $color-twitter: #1DB4EB;
 $color-facebook: #44649D;
@@ -79,10 +73,9 @@ $color-rss: #FD8A22;
 $global-font-size: 130%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.4;
-
 $foundation-palette: (
-  primary: $brand-color1,
-  secondary: $brand-color2,
+  primary: $eminence,
+  secondary: $orchid,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -99,17 +92,15 @@ $white: #FFFFFF;
 
 
 $djangocon-palette: (
-  brand-color1: $brand-color1,
-  brand-color2: $brand-color2,
-  brand-color3: $brand-color3,
-  brand-color4: $brand-color4,
-
-  brand-color5: $brand-color5,
-  brand-color6: $brand-color6,
-  brand-color7: $brand-color7,
-  brand-color8: $brand-color8,
-
-  white: $white,
+  eminence: $eminence,
+  orchid: $orchid,
+  shakespeare: $shakespeare,
+  viking: $viking,
+  willow: $willow,
+  violetred: $violetred,
+  sienna: $sienna,
+  festival: $festival,
+  yellow: $yellow,
   light-gray: $light-gray,
   medium-gray: $medium-gray,
   dark-gray: $dark-gray,
@@ -124,7 +115,6 @@ $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: 400;
-$global-weight-semibold: 600;
 $global-weight-bold: 700;
 $global-radius: 0;
 $global-text-direction: ltr;
@@ -161,8 +151,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-//$header-font-family: 'Lilita One', Helvetica, sans-serif;
-$header-font-family: $body-font-family;
+$header-font-family: 'Signika', Helvetica, sans-serif;
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -231,7 +220,7 @@ $abbr-underline: 1px dotted $black;
 // 5. Typography Helpers
 // ---------------------
 
-$lead-font-size: 1.125rem;
+$lead-font-size: 1.2rem;
 $lead-lineheight: 1.5;
 $subheader-lineheight: 1.4;
 $subheader-color: $dark-gray;
@@ -298,14 +287,14 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.85em 1.25em;
+$button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $white;
-//$button-background-hover: $brand-color2;
+$button-background: $primary-color;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
-$button-radius: 30px;
+$button-radius: $global-radius;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
@@ -333,7 +322,7 @@ $buttongroup-radius-on-each: true;
 
 $callout-background: transparent;
 $callout-background-fade: 0%;
-$callout-border: 4px solid $brand-color2;
+$callout-border: 4px solid $violetred;
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1.5rem;
 $callout-font-color: $body-font-color;
@@ -386,7 +375,7 @@ $drilldown-transition: transform 0.15s linear;
 $drilldown-arrows: true;
 $drilldown-arrow-color: $medium-gray;
 $drilldown-arrow-size: 6px;
-$drilldown-background: $brand-color1;
+$drilldown-background: get-color(primary);
 
 // 17. Dropdown
 // ------------
@@ -410,9 +399,8 @@ $dropdownmenu-arrows: true;
 $dropdownmenu-arrow-color: $black;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-min-width: 260px;
-$dropdownmenu-background: transparent;
+$dropdownmenu-background: get-color(primary);
 $dropdownmenu-border: none;
-$dropdownmenu-submenu-background: $brand-color2;
 
 // 19. Forms
 // ---------
@@ -457,11 +445,11 @@ $form-button-radius: $global-radius;
 // 20. Label
 // ---------
 
-$label-background: $brand-color5;
+$label-background: get-color(primary);
 $label-color: $white;
 $label-color-alt: $black;
 $label-palette: $foundation-palette;
-$label-font-size: 0.9rem;
+$label-font-size: 0.8rem;
 $label-padding: 0.3333em 0.5em;
 $label-radius: 4px;
 
@@ -646,7 +634,7 @@ $tab-content-padding: 0;
 
 $thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
-$thumbnail-shadow: 0 0 0 2px $brand-color2;
+$thumbnail-shadow: 0 0 0 2px $violetred;
 $thumbnail-shadow-hover: none;
 $thumbnail-transition: none;
 $thumbnail-radius: 0;
@@ -654,12 +642,12 @@ $thumbnail-radius: 0;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $white;
+$titlebar-background: get-color(primary);
 $titlebar-color: $black;
 $titlebar-padding: 0;
-$titlebar-text-font-weight: $global-weight-normal;
-$titlebar-icon-color: $brand-color1;
-$titlebar-icon-color-hover: $brand-color2;
+$titlebar-text-font-weight: $global-weight-bold;
+$titlebar-icon-color: $white;
+$titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
 // 36. Tooltip

@@ -16,18 +16,6 @@ li {
 .lead {
   margin-bottom: 2.5rem;
   font-weight: $global-weight-normal;
-
-  @include breakpoint(medium) {
-    font-size: 1.3rem;
-  }
-}
-
-.lead.stripes {
-  margin-bottom: 3.5rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 2px solid $white;
-  border-bottom: 2px solid $white;
 }
 
 .lead.min {
@@ -39,16 +27,7 @@ li {
 }
 
 .demp {
-  font-weight: $global-weight-semibold;
-}
-
-.label {
-  font-weight: $global-weight-semibold;
-}
-
-hr {
-  margin-top: $global-margin * 2;
-  margin-bottom: $global-margin * 2;
+  font-weight: 600;
 }
 
 // For patching headers
@@ -67,7 +46,6 @@ iframe,
 
 .responsive-embed iframe {
   margin-bottom: 0;
-  max-width: 100%;
 }
 
 .thumbnail-block {
