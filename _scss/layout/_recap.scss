@@ -1,7 +1,12 @@
 .recap-header {
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-  background-image: url('/static/img/sunrise-sky.svg');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 10rem;
+
+  background-image: url('/static/img/sunrise-post-event.svg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,6 +17,10 @@
 
   h1:after {
     display: none;
+  }
+
+  @include breakpoint(medium) {
+    min-height: 14rem;
   }
 }
 
@@ -82,10 +91,13 @@
 .presenter-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   // A little more padding than usual
   padding-right: 30px;
   padding-left: 30px;
+
+  @include breakpoint(medium) {
+    justify-content: center;
+  }
 }
 
 .presenter-list-block {
@@ -118,6 +130,7 @@
 .photos-block {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   background: $brand-color6;
 
   &-header {
@@ -131,6 +144,13 @@
 
   .photo {
     flex: 1 0 auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .photo img {
+    visibility: hidden;
   }
 
   @include breakpoint(medium) {

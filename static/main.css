@@ -6138,8 +6138,8 @@ caption {
 }
 
 thead {
-  background: whitesmoke;
-  color: #1E1E1E;
+  background: #0A51A4;
+  color: #FFFFFF;
 }
 
 tfoot {
@@ -6203,7 +6203,7 @@ table.scroll {
 }
 
 table.hover thead tr:hover {
-  background-color: #f0f0f0;
+  background-color: #094c9a;
 }
 table.hover tfoot tr:hover {
   background-color: #e6e6e6;
@@ -7958,7 +7958,6 @@ li {
 }
 
 .lead {
-  margin-bottom: 2.5rem;
   font-weight: 400;
 }
 @media print, screen and (min-width: 55.625em) {
@@ -8595,9 +8594,12 @@ blockquote cite {
 }
 
 .recap-header {
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-  background-image: url("sunrise-sky.477fe0a2.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  background-image: url("sunrise-post-event.57537c5a.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8607,6 +8609,11 @@ blockquote cite {
 }
 .recap-header h1:after {
   display: none;
+}
+@media print, screen and (min-width: 55.625em) {
+  .recap-header {
+    min-height: 14rem;
+  }
 }
 
 .recap-heading {
@@ -8669,9 +8676,13 @@ blockquote cite {
 .presenter-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
   padding-right: 30px;
   padding-left: 30px;
+}
+@media print, screen and (min-width: 55.625em) {
+  .presenter-list {
+    justify-content: center;
+  }
 }
 
 .presenter-list-block {
@@ -8697,6 +8708,7 @@ blockquote cite {
 .photos-block {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   background: #D19FDD;
 }
 .photos-block-header {
@@ -8709,6 +8721,12 @@ blockquote cite {
 }
 .photos-block .photo {
   flex: 1 0 auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photos-block .photo img {
+  visibility: hidden;
 }
 @media print, screen and (min-width: 55.625em) {
   .photos-block .photo {

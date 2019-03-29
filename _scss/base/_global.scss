@@ -14,7 +14,6 @@ li {
 }
 
 .lead {
-  margin-bottom: 2.5rem;
   font-weight: $global-weight-normal;
 
   @include breakpoint(medium) {

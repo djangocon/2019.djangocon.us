@@ -196,6 +196,7 @@ permalink: /recap/
     <div class="column small-12 medium-5">
       <h2>Stat Block</h2>
       <p class="lead">It is very likely that we will want to feature some sort of table or data element. Perhaps this is survey results, or a pie chart of swag selection, etc.</p>
+      <p>On mobile this will stack. You will want two paragraphs here, even if the second one is sort of short. The <code>lead</code> class is optional, too.</p>
     </div>
 
     <div class="column hide-for-mobile medium-6">
@@ -245,62 +246,16 @@ permalink: /recap/
     <p>We took a total over 300 photos this year. Here are some of our favorites. What were some of your favorite moments this year?</p>
     <a href="#" class="button theme-brand-color3">View all photos</a>
   </header>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
-  <div class="photo">
-    <img
-      src="https://placeimg.com/840/680/animals" alt="" />
-  </div>
+
+  {% for i in (1..8) %}
+    <div
+      class="photo"
+      style="background-image: url(https://placeimg.com/1280/720/animals)">
+      <img
+        src="https://placeimg.com/1280/720/animals"
+        alt="" />
+    </div>
+  {% endfor %}
 </div>
 
 <div class="section-pad">
@@ -308,6 +263,7 @@ permalink: /recap/
     <div class="column small-12 medium-5">
       <h2>Stat Block</h2>
       <p class="lead">It is very likely that we will want to feature some sort of table or data element. Perhaps this is survey results, or a pie chart of swag selection, etc.</p>
+      <p>On mobile this will stack. You will want two paragraphs here, even if the second one is sort of short. The <code>lead</code> class is optional, too.</p>
     </div>
 
     <div class="column hide-for-mobile medium-6">
