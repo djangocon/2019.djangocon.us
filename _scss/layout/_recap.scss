@@ -130,15 +130,16 @@
 .photos-block {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  background: $brand-color6;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: $brand-color4;
 
   &-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 2rem;
     width: 100%;
   }
 
@@ -146,7 +147,8 @@
     flex: 1 0 auto;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 101% 101%;
+    font-size: 0;
   }
 
   .photo img {

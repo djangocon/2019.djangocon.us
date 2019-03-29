@@ -8708,22 +8708,24 @@ blockquote cite {
 .photos-block {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  background: #D19FDD;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: #171D2F;
 }
 .photos-block-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 2rem;
   width: 100%;
 }
 .photos-block .photo {
   flex: 1 0 auto;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 101% 101%;
+  font-size: 0;
 }
 .photos-block .photo img {
   visibility: hidden;
