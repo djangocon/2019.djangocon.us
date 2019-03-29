@@ -8726,7 +8726,7 @@ blockquote cite {
   max-width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 101% 101%;
+  background-size: cover;
   font-size: 0;
 }
 .photos-block .photo img {
