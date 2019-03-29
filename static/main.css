@@ -7958,6 +7958,7 @@ li {
 }
 
 .lead {
+  margin-bottom: 2.5rem;
   font-weight: 400;
 }
 @media print, screen and (min-width: 55.625em) {
@@ -8722,6 +8723,7 @@ blockquote cite {
 }
 .photos-block .photo {
   flex: 1 0 auto;
+  max-width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 101% 101%;
