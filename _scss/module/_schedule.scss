@@ -52,7 +52,7 @@
     color: $secondary-color;
   }
 
-  a:hover .byline {
+  a:hover .mini-profile-byline {
     color: $body-font-color;
   }
 
@@ -90,7 +90,7 @@
     display: block;
   }
 
-  .byline {
+  .mini-profile-byline {
     margin-top: $global-margin;
     padding-top: 0;
   }
@@ -133,7 +133,7 @@
   padding: ($global-margin * 1.75) $global-margin $global-margin;
 }
 
-.presenter-byline {
+.mini-profile-byline {
   display: flex;
   align-items: center;
 

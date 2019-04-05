@@ -8674,34 +8674,34 @@ blockquote cite {
   }
 }
 
-.presenter-list {
+.mini-profile {
   display: flex;
   flex-flow: row wrap;
   padding-right: 30px;
   padding-left: 30px;
 }
 @media print, screen and (min-width: 55.625em) {
-  .presenter-list {
+  .mini-profile {
     justify-content: center;
   }
 }
 
-.presenter-list-block {
+.mini-profile-block {
   padding-right: 0.4807692308rem;
   padding-left: 0.4807692308rem;
 }
-.presenter-list-block .presenter-list .presenter-byline {
+.mini-profile-block .mini-profile-list .mini-profile-byline {
   display: inline-flex;
   margin: 0 1rem 2rem;
 }
-.presenter-list-block .presenter-list .avatar {
+.mini-profile-block .mini-profile-list .avatar {
   max-width: 60px;
 }
 @media print, screen and (min-width: 55.625em) {
-  .presenter-list-block .presenter-byline {
+  .mini-profile-block .mini-profile-byline {
     margin: 0 1.5rem 2rem;
   }
-  .presenter-list-block .avatar {
+  .mini-profile-block .avatar {
     max-width: 80px;
   }
 }
@@ -9278,6 +9278,46 @@ body.sunset .footer {
   text-align: center;
 }
 
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon.float-left {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.icon.float-right {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.icon-small {
+  width: 24px;
+  height: 24;
+}
+
+.icon-medium {
+  width: 48px;
+  height: 48px;
+}
+
+.icon-large {
+  width: 64px;
+  height: 64px;
+}
+
+.icon-xlarge {
+  width: 128px;
+  height: 128px;
+}
+
+.icon-jumbo {
+  width: 256px;
+  height: 256px;
+}
+
 .presenters {
   margin-top: 2rem;
 }
@@ -9396,7 +9436,7 @@ body.sunset .footer {
 .event a:hover .event-title {
   color: #703D76;
 }
-.event a:hover .byline {
+.event a:hover .mini-profile-byline {
   color: #1E1E1E;
 }
 .event .event-content {
@@ -9429,7 +9469,7 @@ body.sunset .footer {
 .event.boxed .event-content {
   display: block;
 }
-.event.boxed .byline {
+.event.boxed .mini-profile-byline {
   margin-top: 1rem;
   padding-top: 0;
 }
@@ -9466,7 +9506,7 @@ body.sunset .footer {
   padding: 1.75rem 1rem 1rem;
 }
 
-.presenter-byline {
+.mini-profile-byline {
   display: flex;
   align-items: center;
   margin-top: 30px;
@@ -9474,10 +9514,10 @@ body.sunset .footer {
   line-height: 1.2;
   text-decoration: none;
 }
-.presenter-byline + .presenter-byline {
+.mini-profile-byline + .mini-profile-byline {
   margin-top: 0.5rem;
 }
-.presenter-byline .avatar {
+.mini-profile-byline .avatar {
   margin: 0 0.5em 0 0;
   max-width: 60px;
   border-radius: 50%;

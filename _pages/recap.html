@@ -133,7 +133,7 @@ permalink: /recap/
 
           {% if post.presenters %}
             {% for presenter in post.presenters %}
-            <p class="presenter-byline">
+            <p class="mini-profile-byline">
               {% if presenter.photo_url != blank %}
               <img
                 class="avatar"
@@ -161,16 +161,16 @@ permalink: /recap/
 {% comment %}
   SPEAKERS
 {% endcomment %}
-<div class="section-pad presenter-list-block theme-brand-color5">
+<div class="section-pad mini-profile-block theme-brand-color5">
   <h2 class="recap-heading">All Sessions Performed by Amazing People</h2>
-  <section class="presenter-list">
+  <section class="mini-profile">
     {% for post in site.schedule %}
       {% if post.presenters %}
         {% for presenter in post.presenters %}
           {% if presenter.name %}
             <a
               href="{{ post.permalink }}"
-              class="presenter-byline">
+              class="mini-profile-byline">
               {% if presenter.photo_url != blank %}
               <img
                 class="avatar"

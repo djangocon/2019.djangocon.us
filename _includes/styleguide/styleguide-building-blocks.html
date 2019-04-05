@@ -1,0 +1,40 @@
+<h1>Building Blocks (Sections)</h1>
+
+<p>Most sections of the site consist of block-like structures. These structures follow a similar format:</p>
+
+{% highlight html %}<div class="section-pad">
+  <div class="row">
+    <div class="column">
+      <!-- content here -->
+    </div>
+  </div>
+</div>{% endhighlight %}
+
+<div class="ss-code-live">
+  <div class="section-pad">
+    <div class="row">
+      <div class="column">
+        &lt;!-- content here (but not really) --&gt;
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>By default, this doesn't do much except setup a full width grid and a single column. To learn more about the grid system, please see Foundation's docs on the <a href="https://foundation.zurb.com/sites/docs/grid.html">Legacy Grid</a>. However, there are a few helpful tips to keep in mind:</p>
+
+<ul>
+  <li>The website uses a 12 column grid</li>
+  <li>The maximum width (as of 2019) is 1200px.</li>
+  <li>Always start the column class list with <code>.column</code>.</li>
+  <li>You'll generally want to focus on small, medium, and large sizes. You can determine a column's width by using <code>.[size]-[column-width]</code>. So for example, <code>.medium-6</code> would create a 50% wide column on medium displays.</li>
+  <li>If you do not define a larger size, the previous size will be used. Example: <code>.small-12 .medium-3</code> results in a column that is 1/4 wide (as 1/4 of 12 columns is 3)</li>
+</ul>
+
+<p>These building blocks can be themed using the classes outlined under <a href="#themed-page-sections">Themed page sections</a>. As these building blocks are meant to stack, you'll want to alternate between section themes.</p>
+
+<p>You can roll your own top and bottom padding by using the following classes:</p>
+
+<ul>
+  <li><code>.v-pad-top</code> - Handles top padding for small and large displays.</li>
+  <li><code>.v-pad-bottom</code> - Handles bottom padding for small and large displays.</li>
+</ul>

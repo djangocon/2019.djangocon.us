@@ -88,7 +88,7 @@
   }
 }
 
-.presenter-list {
+.mini-profile {
   display: flex;
   flex-flow: row wrap;
   // A little more padding than usual
@@ -100,13 +100,13 @@
   }
 }
 
-.presenter-list-block {
+.mini-profile-block {
   // TODO: Hacked padding
   padding-right: 0.4807692308rem;
   padding-left: 0.4807692308rem;
 
-  .presenter-list {
-    .presenter-byline {
+  .mini-profile-list {
+    .mini-profile-byline {
       display: inline-flex;
       margin: 0 1rem 2rem;
     }
@@ -117,7 +117,7 @@
   }
 
   @include breakpoint(medium) {
-    .presenter-byline {
+    .mini-profile-byline {
       margin: 0 1.5rem 2rem;
     }
 
