@@ -1,0 +1,40 @@
+.social-pic-template {
+  position: relative;
+  max-width: 800px;
+
+  text-align: right;
+  color: $brand-color1;
+
+
+  &-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    padding: 0 40px;
+    width: 100%;
+    font-family: 'Lilita One', cursive;
+    font-size: 46px;
+    font-weight: normal;
+    text-align: center;
+    color: #FFF;
+    transform: translateY(-25%);
+  }
+
+  &.title.alt-font {
+    font-family: $body-font-family;
+  }
+
+  &-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    width: 140px;
+  }
+
+  // In case a tint is applied
+  &[class*='tint-']:after {
+    opacity: .5;
+  }
+}

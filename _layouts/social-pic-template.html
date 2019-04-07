@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i|Lilita+One" rel="stylesheet">
+    <link rel="stylesheet" href="/static/main.css">
+  </head>
+  <body class="{{ page.layout }}-page">
+
+    {% comment %}
+      You can change `tint-brand-color5` to any of the tints as shown here:
+
+      https://2019.djangocon.us/styleguide/#photo-hero-section
+
+      Note that the effect is lessened here to match DjangoCon US Twitter history.
+    {% endcomment %}
+    <div class="social-pic-template tint-brand-color5">
+      {% comment %}
+        Will work with any image.
+      {% endcomment %}
+      <img
+        src="{{ "/static/img/about.jpg" | relative_url }}"
+        width="100%"
+        alt="" />
+
+      <img
+        src="{{ "/static/img/logo-white.svg" | relative_url }}"
+        class="social-pic-template-logo"
+        alt="" />
+
+      <h1 class="social-pic-template-title">Our 2019 CFP is now Open!</h1>
+    </div>
+
+  </body>
+</html>

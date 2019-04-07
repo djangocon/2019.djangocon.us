@@ -9796,6 +9796,40 @@ body.sunset .footer {
   }
 }
 */
+.social-pic-template {
+  position: relative;
+  max-width: 800px;
+  text-align: right;
+  color: #0A51A4;
+}
+.social-pic-template-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  padding: 0 40px;
+  width: 100%;
+  font-family: "Lilita One", cursive;
+  font-size: 46px;
+  font-weight: normal;
+  text-align: center;
+  color: #FFF;
+  transform: translateY(-25%);
+}
+.social-pic-template.title.alt-font {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+.social-pic-template-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  width: 140px;
+}
+.social-pic-template[class*=tint-]:after {
+  opacity: 0.5;
+}
+
 .social-icons {
   margin: 2em auto;
   list-style: none;
