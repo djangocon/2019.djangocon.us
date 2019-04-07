@@ -11,12 +11,13 @@ description: |
 
 {% comment %}
 Our opportunity grant application is now closed and all decision notifications have been sent.
-{% endcomment %}
 
 If you have any questions, feel free to reach out to the opportunity grant team at [{{ site.opportunity_grants_email }}](mailto:{{ site.opportunity_grants_email }}).
 
-
 <br>
+{% endcomment %}
+
+Our <a href="{{site.opportunity_grant_application}}">opportunity grant application</a> is open until May 20th, 2019. All decision notifications will be sent by June 24th, 2019.
 
 ## Diversity Sponsorships
 
