@@ -14,6 +14,8 @@ We are grateful to the past organizers of DjangoCon US and of other events for t
 - [AlterConf](https://www.alterconf.com/speak), speaker slide guidelines
 - [DjangoCon Europe](https://2016.djangocon.eu), Code of Conduct Transparency Report
 - [DjangoCon Europe](https://2015.djangocon.eu), speaker mentorship program
+- [University of Bristol, LGBT+ Society](http://www.lgbtplusbristol.org.uk/), bathroom signage
+- [Django Under the Hood](https://djangounderthehood.com/), deep dive day
 
 ## Website Design
 
@@ -33,7 +35,7 @@ This website is based on free and open source software, and was designed by our 
 
 <div class="partner-footer section-pad">
   <h3 class="v-pad-bottom text-left">Our Sponsors</h3>
-  {% assign sponsors_by_level = "Platinum|Gold|Silver|Bronze|Diversity & Inclusion|Community" | split: "|" %}
+  {% assign sponsors_by_level = "Platinum|Gold|Lanyard|Silver|Bronze|Diversity & Inclusion|Community" | split: "|" %}
   {% for level in sponsors_by_level %}
     {% assign sponsors_in_level = site.sponsors | where: 'level', level | where: 'hidden', false %}
     {% assign sponsors_count = sponsors_in_level | size %}
