@@ -1,0 +1,52 @@
+<h1>Icons</h1>
+
+<p>You can add icons in content by including them just like images. Because most icons are SVGs, they will likely expand to take up the full width available:</p>
+
+{% highlight html %}{% include styleguide/icons-example1.html %}{% endhighlight %}
+
+<div class="ss-code-live">
+  {% include styleguide/icons-example1.html %}
+</div>
+
+<hr />
+
+<h2>Sizing Icons</h2>
+
+<p>Big, full width icons may not be preferred. There are two ways to size icons:</p>
+
+<ul>
+  <li>Use the icon size classes: <code>icon-small</code>, <code>icon-medium</code>, <code>icon-large</code>, <code>icon-xlarge</code>, or <code>icon-jumbo</code>.</li>
+  <li>Put icons in the grid.</li>
+</ul>
+
+{% highlight html %}{% include styleguide/icons-example2.html %}{% endhighlight %}
+
+<div class="ss-code-live">
+  {% include styleguide/icons-example2.html %}
+</div>
+
+{% highlight html %}{% include styleguide/icons-example3.html %}{% endhighlight %}
+
+<div class="ss-code-live">
+  {% include styleguide/icons-example3.html %}
+</div>
+
+<hr />
+
+<h2>Icons in Content</h2>
+
+<p>You may wish to place an icon in or around content. Foundation provides some handy helpers for this: <code>.float-left</code> and <code>.float-right</code>. Because these use CSS floats, you'll need to wrap the float (or the container) in an element with the <code>.clearfix</code> class.</p>
+
+<p><strong>NOTE:</strong> Blog posts have the <code>.clearfix</code> class added by default.</p>
+
+{% highlight html %}{% include styleguide/icons-example4.html %}{% endhighlight %}
+
+<div class="ss-code-live">
+  {% include styleguide/icons-example4.html %}
+</div>
+
+{% highlight html %}{% include styleguide/icons-example5.html %}{% endhighlight %}
+
+<div class="ss-code-live">
+  {% include styleguide/icons-example5.html %}
+</div>

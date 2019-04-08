@@ -1,0 +1,366 @@
+---
+layout: base
+title: 2019 DjangoCon US Recap
+heading: 2019 Recap
+permalink: /recap/
+---
+
+<header class="subpage-header recap-header">
+  <h1>{{ page.heading }}</h1>
+</header>
+
+<div class="content">
+
+<div class="section-pad theme-light-gray recap-intro">
+  <div class="row column">
+    <h2 class="demp recap-heading">
+      2 lines (on desktop) that stress how important the conference is. Or just a fun headline.
+    </h2>
+  </div>
+
+  <div class="row">
+    <div class="column medium-7">
+      <img
+        src="/static/img/full-crowd.jpg"
+        alt="The crowd of DjangoCon 2018 attendees" />
+    </div>
+
+    <div class="column medium-5">
+      <p class="lead">
+        Mention the conference location and dates in one or two lines. Speak to the audience type, e.g. "Django Fans".
+      </p>
+
+      <p>Supportive copy speaking to the line up or topics discussed, generally setting the mood for a successful event. Basically the primary takeaway.</p>
+
+      <p><strong>Fond memory from 2019?</strong> Share it with us:</p>
+
+      <ul class="social-icons highlight">
+        <li>
+          <a class="twitter" href="https://twitter.com/djangocon">
+            <svg class="social-icon">
+              <title>Twitter</title>
+              <use xlink:href="#twitter-icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="github" href="https://github.com/djangocon/">
+            <svg class="social-icon">
+              <title>Github</title>
+              <use xlink:href="#github-icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="facebook" href="https://www.facebook.com/djangoconus/">
+            <svg class="social-icon">
+              <title>Facebook</title>
+              <use xlink:href="#facebook-icon"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="section-pad">
+  <div class="row">
+    <div class="column small-12 medium-8">
+      <p>This is a text+icon section, of sorts. It's a way to break up lengthy copy with either an image or icon to the right.</p>
+
+      <p>At this point on the page you should be outlining major points or features about the conference and really getting into the meat of the storytelling. Live, laugh, love, all that. Since this page shouldn't feature a ton of copy, this is really your chance to set things up.</p>
+
+      <p>This area can be quite long. No more than 3 paragraphs though, all about 3-5 sentences. Everything else after this is catered to a specific audience type. That could be:</p>
+
+      <ul>
+        <li>People who want pictures.</li>
+        <li>Folks getting a feel for conference topics.</li>
+        <li>Sponsors looking for themselves, competitors, or to get a feel for the caliber of sponsor.</li>
+      </ul>
+
+      <p>But generally you don't want to end on a list.</p>
+    </div>
+
+    <div class="column hide-for-mobile medium-4 text-center">
+      {% comment %}
+        Main graphic/icon for the year. e.g. for 2018, the crab. 2019, the boat.
+      {% endcomment %}
+      <img
+        src="/static/img/sail-circle.svg"
+        alt="A little boat"
+        width="360" />
+    </div>
+  </div>
+</div>
+
+<div class="section-pad highlight-events theme-medium-gray">
+  {% comment %}
+    TODO: This could be not-bad.
+
+    NOTE: Limit applied for staging purposes only.
+
+    Uses an alternative grid to mix things up a bit.
+  {% endcomment %}
+  <div class="events">
+    <header class="highlight-events-header">
+      <h2>Awesome Talks and Tutorials</h2>
+      <p class="lead">We featured over <strong>60</strong> talks &amp; tutorials this year. Here's some crowd favorites!</p>
+      <a href="/schedule/" class="button">See the full schedule</a>
+    </header>
+    {% for post in site.schedule limit:20 %}
+      {% if post.permalink and post.room != 'filler' %}
+      <article
+        class="event
+        {% if post.room == "Salon A-E" %}loc-main
+        {% elsif post.room == "Salon F-H" %}loc-alt-3
+        {% elsif post.room == "Rio Vista Pavilion" %}loc-alt
+        {% elsif post.room == "Balboa I & II" %}loc-main
+        {% elsif post.room == "Sierra 5" %}loc-alt-3
+        {% elsif post.room == "Cabrillo 1" %}loc-alt-2
+        {% else %}loc-main
+        {% endif %}
+        ">
+        {% unless post.room == 'filler' %}
+          {% if post.permalink %}
+            <a href="{{ post.permalink }}" class="event-content">
+          {% endif %}
+
+          {% if post.title %}
+            <h3 class="event-title">{{ post.title }}</h3>
+          {% endif %}
+
+          {% if post.presenters %}
+            {% for presenter in post.presenters %}
+            <p class="mini-profile-byline">
+              {% if presenter.photo_url != blank %}
+              <img
+                class="avatar"
+                src="{{ presenter.photo_url }}"
+                alt="Photo of {{ presenter.name }}" />
+              {% endif %}
+              {{ presenter.name }}
+              {% if presenter.pronouns != blank %}
+                ({{ presenter.pronouns }})
+              {% endif %}
+            </p>
+            {% endfor %}
+          {% endif %}
+
+          {% if post.permalink %}
+            </a>
+          {% endif %}
+        {% endunless %}
+      </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% comment %}
+  SPEAKERS
+{% endcomment %}
+<div class="section-pad mini-profile-block theme-brand-color5">
+  <h2 class="recap-heading">All Sessions Performed by Amazing People</h2>
+  <section class="mini-profile">
+    {% for post in site.schedule %}
+      {% if post.presenters %}
+        {% for presenter in post.presenters %}
+          {% if presenter.name %}
+            <a
+              href="{{ post.permalink }}"
+              class="mini-profile-byline">
+              {% if presenter.photo_url != blank %}
+              <img
+                class="avatar"
+                src="{{ presenter.photo_url }}"
+                alt="Photo of {{ presenter.name }}" />
+              {% endif %}
+              {{ presenter.name }}
+              {% if presenter.pronouns != blank %}
+                ({{ presenter.pronouns }})
+              {% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </section>
+</div>
+
+{% include sponsor-footer.html %}
+
+<div class="section-pad theme-light-gray">
+  <div class="row">
+    <div class="column small-12 medium-5">
+      <h2>Stat Block</h2>
+      <p class="lead">It is very likely that we will want to feature some sort of table or data element. Perhaps this is survey results, or a pie chart of swag selection, etc.</p>
+      <p>On mobile this will stack. You will want two paragraphs here, even if the second one is sort of short. The <code>lead</code> class is optional, too.</p>
+    </div>
+
+    <div class="column hide-for-mobile medium-6">
+      <div class="table-scroll">
+        <table class="unstriped stacked">
+          <thead>
+            <tr>
+              <th>T-Shirts Eaten</th>
+              <th>OMG What?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Small</td>
+              <td>Seriously</td>
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>People</td>
+            </tr>
+            <tr>
+              <td>Large</td>
+              <td>Ate...</td>
+            </tr>
+            <tr>
+              <td>X-Large</td>
+              <td>The shirts?</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>You could also put an image here, no problem!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column small-12 medium-6">
+      <h3>And remember...</h3>
+      <p>Under the hood it's all just a grid system. So you can just add a new row if you want to associate more text with this block. Easy peasy, lemon squeezy.</p>
+    </div>
+  </div>
+</div>
+
+<div class="photos-block">
+  <header class="photos-block-header theme-brand-color4">
+    <h2>Lots of Photos</h2>
+    <p>We took a total over 300 photos this year. Here are some of our favorites. What were some of your favorite moments this year?</p>
+    <a href="#" class="button theme-brand-color3">View all photos</a>
+  </header>
+
+  {% for i in (1..8) %}
+    <div
+      class="photo"
+      style="background-image: url(https://placeimg.com/1280/720/animals/{{ i }})">
+      <img
+        src="https://placeimg.com/1280/720/animals/{{ i }}"
+        alt="" />
+    </div>
+  {% endfor %}
+</div>
+
+<div class="section-pad">
+  <div class="row">
+    <div class="column small-12 medium-5">
+      <h2>Stat Block</h2>
+      <p class="lead">It is very likely that we will want to feature some sort of table or data element. Perhaps this is survey results, or a pie chart of swag selection, etc.</p>
+      <p>On mobile this will stack. You will want two paragraphs here, even if the second one is sort of short. The <code>lead</code> class is optional, too.</p>
+    </div>
+
+    <div class="column hide-for-mobile medium-6">
+      <div class="table-scroll">
+        <table class="unstriped stacked">
+          <thead>
+            <tr>
+              <th>T-Shirts Eaten</th>
+              <th>OMG What?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Small</td>
+              <td>Seriously</td>
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>People</td>
+            </tr>
+            <tr>
+              <td>Large</td>
+              <td>Ate...</td>
+            </tr>
+            <tr>
+              <td>X-Large</td>
+              <td>The shirts?</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>You could also put an image here, no problem!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column small-12 medium-6">
+      <h3>And remember...</h3>
+      <p>Under the hood it's all just a grid system. So you can just add a new row if you want to associate more text with this block. Easy peasy, lemon squeezy.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-pad organizer-block theme-brand-color4">
+  <div class="row">
+    <header class="organizer-block-header recap-heading">
+      <h2>DjangoCon 2019 is possible through lots of :heart:</h2>
+      <p class="lead">Sed convallis laoreet elit quis rutrum. Sed fringilla posuere posuere. Curabitur placerat et enim nec commodo. In vehicula nulla vitae odio mattis aliquet.</p>
+    </header>
+  </div>
+  <div class="row small-up-1 smedium-up-2 medium-up-3 large-up-4 organizers">
+    {% for organizer in site.organizers %}
+      {% unless organizer.hidden %}
+        <div
+          class="column column-block">
+          <div class="profile">
+            <img
+              class="thumbnail"
+              src="{{ organizer.photo_url }}"
+              alt="Photo of {{ organizer.name }}" />
+            <div class="profile-namecard">
+              <h3 class="profile-name">
+                {{ organizer.name }}
+                {% if organizer.pronouns != blank %}
+                  ({{ organizer.pronouns }})
+                {% endif %}
+              </h3>
+              {{ organizer.role }}
+            </div>
+            <ul class="social-icons">
+              {% if organizer.twitter != blank %}
+              <li>
+                <a class="twitter" href="https://twitter.com/{{ organizer.twitter }}" target="_blank">
+                  <svg class="twitter-icon"><use xlink:href="#twitter-icon"></use></svg>
+                </a>
+              </li>
+              {% endif %}
+              {% if organizer.github != blank %}
+              <li>
+                <a class="github" href="https://github.com/{{ organizer.github }}/" target="_blank">
+                  <svg class="social-icon"><use xlink:href="#github-icon"></use></svg>
+                </a>
+                </li>
+              {% endif %}
+              {% if organizer.website != blank %}
+              <li>
+                <a class="web" href="{{ organizer.website }}" target="_blank">
+                  <svg class="social-icon"><use xlink:href="#web-icon"></use></svg>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+            </div><!--/.profile -->
+        </div><!--/.column -->
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>
+
+</div> <!-- End .content -->

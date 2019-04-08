@@ -1,0 +1,27 @@
+<h1>Presenters List</h1>
+
+<p>The presenters list features a list of avatars and titles, meant for a list of speakers. Minimal information should be shown.</p>
+
+{% highlight html %}<section class="section-pad mini-profile-block">
+<div class="mini-profile-list">
+    <a href="#" class="mini-profile-byline">
+      <img class="avatar" src="https://placeimg.com/64/64/animals/1" alt="Presenter Name">Majorly Cute Animal
+    </a>
+
+    <!-- Repeat <a> as needed -->
+</div>
+</section>{% endhighlight %}
+
+<section class="section-pad mini-profile-block">
+  <div class="mini-profile-list">
+    {% for i in (1..16) %}
+    {% assign adj = "Majorly Cute,Incredibly Cuddly,Awesomely Funny,Super Friendly" | split:"," %}
+    {% assign y = i | modulo: 4 %}
+      <a href="#" class="mini-profile-byline">
+        <img class="avatar" src="https://placeimg.com/64/64/animals/{{ i }}" alt="Presenter Name">
+          {{ adj[y] }}
+         Animal
+      </a>
+    {% endfor %}
+  </div>
+</section>
