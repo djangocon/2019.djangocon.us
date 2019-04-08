@@ -1,36 +1,39 @@
 .social-pic-template {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
+  height: 820px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   text-align: right;
-  color: $brand-color1;
-
+  color: #FFF;
 
   &-title {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 0;
     z-index: 1;
     padding: 0 40px;
     width: 100%;
     font-family: 'Lilita One', cursive;
-    font-size: 46px;
+    font-size: 60px;
     font-weight: normal;
     text-align: center;
-    color: #FFF;
     transform: translateY(-25%);
   }
 
-  &.title.alt-font {
+  &-title.alt-font {
     font-family: $body-font-family;
+    font-weight: $global-weight-bold;
   }
 
   &-logo {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 22px;
+    left: 22px;
     z-index: 1;
-    width: 140px;
+    width: 300px;
   }
 
   // In case a tint is applied
