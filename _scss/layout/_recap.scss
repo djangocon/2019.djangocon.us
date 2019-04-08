@@ -1,0 +1,176 @@
+.recap-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 10rem;
+
+  background-image: url('/static/img/sunrise-post-event.svg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  h1:after {
+    display: none;
+  }
+
+  @include breakpoint(medium) {
+    min-height: 14rem;
+  }
+}
+
+
+.recap-heading {
+  margin: 0 auto $global-margin;
+  padding: .75rem;
+  max-width: 46rem;
+  background: $brand-color2;
+  text-align: center;
+  color: #FFF;
+
+  .emoji {
+    width: 38px;
+    height: 38px;
+  }
+
+  @include breakpoint(medium) {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+}
+
+.recap-intro .social-icons {
+  margin-top: .5rem;
+}
+
+.recap-intro img {
+  margin-bottom: $global-margin;
+}
+
+.organizer-block .profile .social-icons a {
+  color: $brand-color7;
+}
+
+
+.highlight-events .events {
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: $global-width;
+}
+
+.highlight-events .event {
+  margin: 0 .5rem 1rem;
+}
+
+.highlight-events-header {
+  margin-bottom: $global-margin;
+  width: 100%;
+  text-align: center;
+}
+
+.highlight-events {
+  // Override from elsewhere
+  @include breakpoint(medium) {
+    .events {
+      .event,
+      .event:first-child,
+      .event:last-child {
+        width: calc(100% * 1/3 - 1rem);
+        flex-grow: 0;
+      }
+    }
+  }
+}
+
+.mini-profile {
+  display: flex;
+  flex-flow: row wrap;
+  // A little more padding than usual
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @include breakpoint(medium) {
+    justify-content: center;
+  }
+}
+
+.mini-profile-block {
+  // TODO: Hacked padding
+  padding-right: 0.4807692308rem;
+  padding-left: 0.4807692308rem;
+
+  .mini-profile-list {
+    .mini-profile-byline {
+      display: inline-flex;
+      margin: 0 1rem 2rem;
+    }
+
+    .avatar {
+      max-width: 60px;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .mini-profile-byline {
+      margin: 0 1.5rem 2rem;
+    }
+
+    .avatar {
+      max-width: 80px;
+    }
+  }
+}
+
+.photos-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: $brand-color4;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .photo {
+    flex: 1 0 auto;
+    max-width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0;
+  }
+
+  .photo img {
+    visibility: hidden;
+  }
+
+  @include breakpoint(medium) {
+    .photo {
+      flex: 1 0 33.33%;
+    }
+  }
+
+  @include breakpoint(large) {
+    &-header,
+    &-header + .photo,
+    &-header + .photo + .photo {
+      width: 33.33%;
+    }
+
+    .photo {
+      flex: 1 0 25%;
+    }
+  }
+}

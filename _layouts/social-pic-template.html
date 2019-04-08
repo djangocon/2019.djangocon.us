@@ -1,0 +1,62 @@
+---
+layout: base-screenshot
+---
+
+{% comment %}
+  You can change `tint-brand-color5` to any of the tints as shown here:
+
+  https://2019.djangocon.us/styleguide/#photo-hero-section
+
+  Note that the effect is lessened here to match DjangoCon US Twitter history.
+{% endcomment %}
+
+{% comment %}
+  You can modify the contents of this document by using query string parameters:
+
+  ?tint=tint-brand-color1&text=Howdy+DjangoCon+Attendees!&img=/static/img/full-crowd.jpg&type=alt
+
+  This will update the text, tint, image, and use an alternative font.
+{% endcomment %}
+<div
+  id="Card"
+  class="social-pic-template {{ page.tint | default:"tint-brand-color5" }}"
+  style="background-image: url({{ page.bg_image | default:"/static/img/about.jpg" }});">
+
+  <img
+    src="{{ "/static/img/logo-white.svg" | relative_url }}"
+    class="social-pic-template-logo"
+    alt="" />
+
+  <h1
+    id="Text"
+    class="social-pic-template-title">{{ page.text }}</h1>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const card = document.getElementById('Card');
+  const title = document.getElementById('Text');
+
+  // Get Params
+  const tint = params.get('tint');
+  const img = params.get('img');
+  const text = params.get('text');
+  const type = params.get('type');
+
+  if (tint) {
+    card.classList.remove('tint-brand-color5');
+    card.classList.add(tint);
+  }
+
+  if (img) {
+    card.style.backgroundImage = "url(" + img + ")";
+  }
+
+  if (text) {
+    title.innerHTML = text;
+  }
+
+  if (type) {
+    title.classList.add('alt-font');
+  }
+</script>
