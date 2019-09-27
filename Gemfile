@@ -14,6 +14,6 @@ group :jekyll_plugins do
 end
 
 group :test do
-  gem 'rake:12.3.3'
+  gem 'rake', '12.3.3'
   gem 'html-proofer'
 end
