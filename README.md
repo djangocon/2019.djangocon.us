@@ -9,11 +9,11 @@ The 2019 DjangoCon.us website is a static site compiled with [Jekyll](https://je
 As a contributor, you can help us keep the Django community open and inclusive.
 Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Getting Started
+## --Getting Started--
 
 Get started contributing by reading our [Contributing](CONTRIBUTING.md) guidelines.
 
-### Contributing via Browser
+### --Contributing via Browser--
 
 1. Navigate to the [DjangoCon U.S. website repo](https://github.com/djangocon/2019.djangocon.us) on GitHub. In the upper right hand corner of the repo, click the "Fork" button. Alternatively, click on an individual file and click the pencil icon. GitHub will automatically fork the repo for you.
 
@@ -37,7 +37,7 @@ Click on the `_organizer` folder, then your own `MY_NAME.md` file. Click on the 
 
 If you need assistance, please ask! Complete step 6.
 
-### Contributing via Local Development
+### --Contributing via Local Development--
 
 For changes that require cloning/running the code locally, follow the above instructions to step 5. Instead of navigating to the file through the browser, open up your computer terminal (you will need to have Git installed locally and a code editor of your choice).
 
@@ -139,8 +139,7 @@ To generate a README list from the `.all-contributorsrc` file
 $ npm run generate
 ```
 
-## Contributors
-
+## ---Contributors---
 Thanks goes to these wonderful people:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
